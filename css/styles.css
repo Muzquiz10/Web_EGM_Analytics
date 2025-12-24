@@ -32,9 +32,24 @@ body {
   text-decoration: none;
 }
 
-.hero {
+.hero h1 {
+  padding: 10px 20px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: -40px;
+  background: #f1f5f9;
+}
+
+.hero h2{
   padding: 80px 20px;
   text-align: center;
+  background: #f1f5f9;
+}
+
+.hero-benefits {
+  padding: 5px;
+  text-align: center;
+  margin-top: -40px;
   background: #f1f5f9;
 }
 
@@ -77,3 +92,42 @@ body {
   height: 50px;   
   width: auto;
 }
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.claim {
+  color: #cbd5f5;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.nav-links a:hover {
+  opacity: 0.8;
+}
+
+/* CTA destacado */
+.nav-cta {
+  background: #2563eb;
+  padding: 8px 14px;
+  border-radius: 6px;
+}
+
+.nav-cta:hover {
+  opacity: 0.9;
+}
+
