@@ -65,11 +65,73 @@ body {
 }
 
 
+
+/* FORMATO SECCION DE CONTACTO */
+
 .section {
   padding: 60px 20px;
   max-width: 1000px;
   margin: auto;
 }
+#contacto {
+  text-align: center;
+}
+
+#contacto p {
+  margin-bottom: 10px;
+  color: #475569; 
+}
+
+/* Formulario */
+#contacto form {
+  max-width: 500px;
+  margin: 40px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Inputs y textarea */
+#contacto input,
+#contacto textarea {
+  padding: 14px 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-family: inherit;
+  resize: vertical;
+}
+
+#contacto textarea {
+  min-height: 120px;
+}
+
+/* Focus bonito */
+#contacto input:focus,
+#contacto textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+/* Botón */
+#contacto button {
+  margin-top: 10px;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #0f172a;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#contacto button:hover {
+  background-color: #1e40af;
+}
+
 
 .services {
   display: grid;
@@ -164,4 +226,9 @@ body {
   border-radius: 12px;
 }
 
-
+/* FORMATO MENSAJE EXITO FORMULARIO */
+#form-status {
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: 500;
+}
