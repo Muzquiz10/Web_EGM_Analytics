@@ -100,19 +100,20 @@
 </section>
 
 <!-- CONTACTO -->
-<section id="contacto" class="section">
-  <h2>Contacto</h2>
-  <p>¿Tienes un proyecto o una idea en mente?</p>
-  <p>Cuéntame tu caso y te responderé lo antes posible.</p>
-
-  <form action="https://formspree.io/f/mqekanrk" method="POST">
-    <input type="text" name="Nombre" placeholder="Nombre" required>
-    <input type="text" name="Apellidos" placeholder="Apellidos" required>
-    <input type="email" name="Email" placeholder="Email" required>
-    <textarea name="Mensaje" placeholder="Cuéntame tu proyecto"></textarea>
-    <button type="submit">Enviar</button>
-  </form>
-</section>
+  <section id="contacto" class="section">
+    <h2>Contacto</h2>
+    <p>¿Tienes un proyecto, necesistas ayuda con tus datos o tu página web?
+    </p>
+    <p>¡Hablemos! Rellena el formulario y te responderé lo antes posible.</p>
+    <form id="contact-form"  action="https://formspree.io/f/mqekanrk" method="POST">
+      <input type="text" name="Nombre" placeholder="Nombre" required>
+      <input type="text" name="Apellidos" placeholder="Apellidos" required>
+      <input type="email" name="Email" placeholder="Email" required>
+      <textarea name="Mensaje" placeholder="Cuéntame tu proyecto"></textarea>
+      <button type="submit">Enviar</button>
+      <p id="form-status" aria-live="polite"></p>
+    </form>
+  </section>
 
 <!-- FOOTER -->
 <footer class="footer">
