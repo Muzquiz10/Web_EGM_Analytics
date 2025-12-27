@@ -1,8 +1,22 @@
+/* =========================
+   RESET / BASE
+========================= */
+
 body {
   margin: 0;
-  font-family: 'Roboto',Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   color: #222;
+  background-color: #f1f5f9;
 }
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =========================
+   HEADER / NAV
+========================= */
 
 .header {
   background: #0f172a;
@@ -10,27 +24,69 @@ body {
 }
 
 .navbar {
+  max-width: 1200px;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
 .logo {
-  color: #fff;
-  font-weight: bold;
-  font-size: 20px;
+  height: 50px;
+  width: auto;
+}
+
+.claim {
+  color: #cbd5f5;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
   gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  list-style: none;
 }
 
 .nav-links a {
   color: #fff;
   text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
 }
+
+.nav-links a:hover {
+  opacity: 0.8;
+}
+
+/* CTA del menú */
+.nav-cta {
+  background: #2563eb;
+  padding: 8px 14px;
+  border-radius: 6px;
+}
+
+.nav-cta:hover {
+  opacity: 0.9;
+}
+
+/* =========================
+   HERO
+========================= */
 
 .hero {
   background: #f1f5f9;
@@ -38,14 +94,12 @@ body {
   text-align: center;
 }
 
-/* H1 – SEO fuerte */
 .hero h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
   color: #0f172a;
 }
 
-/* H2 – apoyo comercial */
 .hero h2 {
   font-size: 1.2rem;
   font-weight: normal;
@@ -54,7 +108,6 @@ body {
   color: #334155;
 }
 
-/* Beneficios */
 .hero-benefits {
   margin-bottom: 30px;
 }
@@ -64,25 +117,95 @@ body {
   font-weight: 500;
 }
 
+/* CTA centrado */
+.cta-center {
+  text-align: center;
+}
 
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #0f172a;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+}
 
-/* FORMATO SECCION DE CONTACTO */
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* =========================
+   SECCIONES GENERALES
+========================= */
 
 .section {
   padding: 60px 20px;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* =========================
+   SOBRE MÍ (FONDO COMPLETO)
+========================= */
+
+.about {
+  background-color: #0f172a;
+  color: #f1f5f9;
+}
+
+.about-content {
   max-width: 1000px;
   margin: auto;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
 }
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.about-image {
+  flex: 1;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 300px;
+  border-radius: 12px;
+}
+
+/* =========================
+   CONTACTO
+========================= */
+
 #contacto {
+  background-color: #f1f5f9;
   text-align: center;
 }
 
 #contacto p {
   margin-bottom: 10px;
-  color: #475569; 
+  color: #475569;
 }
 
-/* Formulario */
 #contacto form {
   max-width: 500px;
   margin: 40px auto 0;
@@ -91,7 +214,6 @@ body {
   gap: 15px;
 }
 
-/* Inputs y textarea */
 #contacto input,
 #contacto textarea {
   padding: 14px 16px;
@@ -106,7 +228,6 @@ body {
   min-height: 120px;
 }
 
-/* Focus bonito */
 #contacto input:focus,
 #contacto textarea:focus {
   outline: none;
@@ -114,7 +235,6 @@ body {
   box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
 }
 
-/* Botón */
 #contacto button {
   margin-top: 10px;
   padding: 14px;
@@ -132,29 +252,16 @@ body {
   background-color: #1e40af;
 }
 
-
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+/* Mensaje estado formulario */
+#form-status {
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: 500;
 }
 
-.card {
-  padding: 20px;
-  background: #e2e8f0;
-  border-radius: 8px;
-  text-align: center;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 25px;
-  background: #0f172a;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 6px;
-}
+/* =========================
+   FOOTER
+========================= */
 
 .footer {
   text-align: center;
@@ -162,73 +269,22 @@ body {
   background: #0f172a;
   color: #fff;
 }
-.logo {
-  height: 50px;   
-  width: auto;
-}
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-}
+/* =========================
+   RESPONSIVE
+========================= */
 
-.claim {
-  color: #cbd5f5;
-  font-size: 14px;
-  font-weight: 500;
-  white-space: nowrap;
-}
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
 
-.nav-links li {
-  list-style: none;
-}
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
 
-.nav-links a {
-  font-weight: 500;
-  transition: opacity 0.2s ease;
-}
-
-.nav-links a:hover {
-  opacity: 0.8;
-}
-
-/* CTA destacado */
-.nav-cta {
-  background: #2563eb;
-  padding: 8px 14px;
-  border-radius: 6px;
-}
-
-.nav-cta:hover {
-  opacity: 0.9;
-}
-
-.about-content {
-  display: flex;
-  gap: 40px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.about-text {
-  flex: 1;
-}
-
-.about-image {
-  flex: 1;
-  text-align: center;
-}
-
-.about-image img {
-  max-width: 300px;
-  border-radius: 12px;
-}
-
-/* FORMATO MENSAJE EXITO FORMULARIO */
-#form-status {
-  margin-top: 15px;
-  font-size: 14px;
-  font-weight: 500;
+  .about-text h2 {
+    text-align: center;
+  }
 }
