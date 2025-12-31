@@ -184,12 +184,16 @@ img {
 
 .about-image {
   flex: 1;
-  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+  
 }
 
 .about-image img {
-  max-width: 300px;
-  border-radius: 12px;
+  max-width: 380px;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 0px 30px rgba(248, 244, 244, 0.50);
 }
 
 /* =========================
