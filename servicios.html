@@ -1,78 +1,111 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Servicios | EGM Analytics</title>
-  <link rel="stylesheet" href="css/styles.css">
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre mí | Business Intelligence & Soluciones Digitales | EGM Analytics</title>
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-0TM7ST7BNQ');
+  </script>
+
+  <meta name="description" content="Conoce a Enrique García, especialista en Business Intelligence, Power BI, análisis de datos y soluciones digitales orientadas a negocio.">
+  <link rel="canonical" href="https://egmanalytics.com">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!----------->
+  <!-- favicon -->
+  <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+  <!----------->
+  
+</head>
 <body>
 
-  <!-- HEADER / NAV -->
-  <header class="header">
-    <nav class="navbar">
+<!-- HEADER -->
+<header class="header">
+  <nav class="navbar">
 
-      <!-- LOGO -->
-    <a href="index.html"class="brand"> 
-    <img src="assets/IMG/Logo_EGM_Analytics.png" alt="EGM Analytics" class="logo">
-    <span class="claim">BI & Digital Solutions</span>
+    <!-- Logo + Claim -->
+    <a href="index.html" class="brand">
+      <img src="assets/IMG/Logo_EGM_Analytics.png" alt="EGM Analytics" class="logo">
+      <span class="claim">BI & Digital Solutions</span>
     </a>
 
-      <!-- MENU -->
-      <ul class="nav-links">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="sobre-mi.html">Sobre mí</a></li>
-        <li><a href="proyectos.html">Proyectos</a></li>
-        <li><a href="contacto.html" class="nav-cta" >Contacto</a></li>
-      </ul>
+    <!-- Botón hamburguesa -->
+    <button class="menu-toggle" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-    </nav>
-  </header>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="aboutme.html">Sobre mí</a></li>
+      <li><a href="#contacto" class="nav-cta">Contacto</a></li>
+      <li class="nav-social">
+        <a href ="https://www.linkedin.com/in/enrique-javier-garc%C3%ADa-m%C3%BAzquiz-6a627860/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <img src="assets/icons/Linkdin.svg" alt="LinkedIn">
+        </a>
+      </li>
+    </ul>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h1>Servicios de Analítica de Datos</h1>
-    <p>Transformo tus datos en decisiones claras y accionables</p>
-  </section>
+  </nav>
+</header>
 
-  <!-- SERVICIOS -->
-  <section class="section">
-    <h2>¿Cómo puedo ayudarte?</h2>
+<!-- HERO SIMPLE -->
+<section class="hero">
+  <h1>Servicios</h1>
+  <h2>Business Intelligence, datos y soluciones digitales con enfoque práctico</h2>
+</section>
 
-    <div class="services">
-
-      <div class="card">
-        <h3>Dashboards en Power BI</h3>
-        <p>Cuadros de mando claros, automáticos y orientados a negocio.</p>
-      </div>
-
-      <div class="card">
-        <h3>Análisis de Datos</h3>
-        <p>Limpieza, exploración y análisis para detectar oportunidades.</p>
-      </div>
-
-      <div class="card">
-        <h3>Automatización de procesos</h3>
-        <p>Reducción de tareas manuales con Python, SQL y Cloud.</p>
-      </div>
-
-      <div class="card">
-        <h3>Consultoría Data</h3>
-        <p>Te ayudo a definir métricas, KPIs y estructura de datos.</p>
-      </div>
-
-    </div>
 <!-- CONTACTO -->
-    <a href="contacto.html" class="btn">Solicitar información</a>
+  <section id="contacto" class="section">
+    <h2>Contacto</h2>
+    <p>¿Tienes un proyecto, necesistas ayuda con tus datos o tu página web?
+    </p>
+    <p>¡Hablemos! Rellena el formulario y te responderé lo antes posible.</p>
+    <form id="contact-form"  action="https://formspree.io/f/mqekanrk" method="POST">
+      <input type="text" name="Nombre" placeholder="Nombre" required>
+      <input type="text" name="Apellidos" placeholder="Apellidos" required>
+      <input type="email" name="Email" placeholder="Email" required>
+      <textarea name="Mensaje" placeholder="Cuéntame tu proyecto"></textarea>
+      <button type="submit">Enviar</button>
+      <p id="form-status" aria-live="polite"></p>
+    </form>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>© 2025 EGM Analytics · Todos los derechos reservados</p>
-  </footer>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-social">
+    <p>© 2025 EGM Analytics · BI & Digital Solutions</p>
 
+    <a
+      href="https://www.linkedin.com/in/enrique-javier-garc%C3%ADa-m%C3%BAzquiz-6a627860/"
+      target="_blank"
+      rel="noopener"
+      class="footer-linkedin"
+      aria-label="LinkedIn EGM Analytics"
+    >
+      <img src="assets/icons/Linkdin.svg" alt="LinkedIn">
+    </a>
+  </div>
+</footer>
+
+<!-- JS -->
+<script src="js/main.js"></script>
 </body>
 </html>
-
