@@ -48,3 +48,17 @@ document.querySelectorAll('.nav-links a').forEach(link => {
   });
 });
 });
+
+// Google Analytics - Seguimiento pulsación botón whatsapp y Formulario
+document.addEventListener('DOMContentLoaded', () => {
+  const forms = document.querySelectorAll('#contact-form');
+
+  forms.forEach(form => {
+    form.addEventListener('submit', () => {
+      gtag('event', 'submit_form', {
+        event_category: 'conversion',
+        event_label: window.location.pathname
+      });
+    });
+  });
+});

@@ -73,6 +73,12 @@
   <section class="hero">
     <h1>Transforma tus datos en decisiones con Business Intelligence y soluciones digitales </h1>
     <h2>Análisis de datos, automatización, Dashboards en Power BI, Desarrollo Web a medida, formación en Power BI y Excel </h2>
+
+  <!-- MICROCOPY -->
+  <p class="microcopy-hero">
+    Trabajo directamente contigo, sin intermediarios ni soluciones genéricas.
+  </p>
+
     <div class="hero-benefits">
     <p>📊 Datos claros y accionables</p>
     <p>⚡ Automatización y eficiencia</p>
@@ -84,9 +90,19 @@
     <a href="https://wa.me/34655148870?text=Hola%20EGM%20Analytics,%20me%20gustaría%20recibir%20información%20sobre%20vuestros%20servicios." 
     class="btn"
     target ="_blank"
-    reel="noopener"
+    rel="noopener"
+    onclick="gtag('event', 'click_whatsapp', {
+    event_category: 'conversion',
+    event_label: 'hero_whatsapp'
+    });"
     >
       Consulta sin compromiso</a>
+    
+      <!-- MICROCOPY -->
+    <p class="microcopy-button">
+      Respuesta personalizada en menos de 24h · Sin compromiso
+    </p>
+
   </div>
   </section>
 
@@ -133,6 +149,12 @@
     <p>¿Tienes un proyecto, necesistas ayuda con tus datos o tu página web?
     </p>
     <p>¡Hablemos! Rellena el formulario y te responderé lo antes posible.</p>
+
+  <!-- MICROCOPY -->
+  <p class="microcopy-form">
+    Te responderé personalmente · Sin spam · Sin compromiso
+  </p>
+
     <form id="contact-form"  action="https://formspree.io/f/mqekanrk" method="POST">
       <input type="text" name="Nombre" placeholder="Nombre" required>
       <input type="text" name="Apellidos" placeholder="Apellidos" required>
@@ -142,6 +164,7 @@
       <p id="form-status" aria-live="polite"></p>
     </form>
   </section>
+
 
   <!-- FOOTER -->
   <footer class="footer">

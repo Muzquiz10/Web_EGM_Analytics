@@ -72,6 +72,10 @@
 <section class="hero">
   <h1>Sobre mí</h1>
   <h2>Business Intelligence, datos y soluciones digitales con enfoque práctico</h2>
+<!-- MICROCOPY -->
+<p class="microcopy-hero">
+  Trabajo directamente contigo, sin intermediarios ni soluciones genéricas.
+</p>
 </section>
 
 <!-- SOBRE MÍ -->
@@ -125,6 +129,10 @@
           class="btn"
           target="_blank"
           rel="noopener"
+          onclick="gtag('event', 'click_whatsapp', {
+          event_category: 'conversion',
+          event_label: 'hero_whatsapp'
+          });"
         >
           Hablemos sin compromiso
         </a>
@@ -144,6 +152,12 @@
     <p>¿Tienes un proyecto, necesistas ayuda con tus datos o tu página web?
     </p>
     <p>¡Hablemos! Rellena el formulario y te responderé lo antes posible.</p>
+
+  <!-- MICROCOPY -->
+  <p class="microcopy-form">
+    Te responderé personalmente · Sin spam · Sin compromiso
+  </p>
+
     <form id="contact-form"  action="https://formspree.io/f/mqekanrk" method="POST">
       <input type="text" name="Nombre" placeholder="Nombre" required>
       <input type="text" name="Apellidos" placeholder="Apellidos" required>
