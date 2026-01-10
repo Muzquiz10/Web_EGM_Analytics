@@ -127,7 +127,7 @@ img {
   display: inline-block;
   margin-top: 20px;
   padding: 12px 25px;
-  background: #0f172a;
+  background: #42516f ;
   color: #fff;
   text-decoration: none;
   border-radius: 6px;
@@ -136,6 +136,29 @@ img {
 
 .btn:hover {
   opacity: 0.9;
+}
+
+/* =========================
+   CTA ABOUT ME (destacado)
+========================= */
+
+.cta-about {
+  margin-top: 40px;
+}
+
+.btn-about {
+  background: linear-gradient(135deg, #42516f, #58698a);
+  padding: 14px 34px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  letter-spacing: 0.2px;
+}
+
+.btn-about:hover {
+  opacity: 1;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
 }
 
 /* =========================
