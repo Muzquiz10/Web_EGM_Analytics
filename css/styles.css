@@ -504,21 +504,22 @@ img {
    ANIMACIÓN SERVICIOS
 ========================= */
 
+/* Estado inicial: oculto y desplazado */
 .service-card {
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(30px) scale(0.95);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 /* Cuando se activa la animación */
 .service-card.show {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
 
 /* Retrasos para que entren una a una */
 .service-card:nth-child(1) {
-  transition-delay: 0.2s;
+  transition-delay: 0.3s;
 }
 
 .service-card:nth-child(2) {
@@ -526,8 +527,9 @@ img {
 }
 
 .service-card:nth-child(3) {
-  transition-delay: 0.10s;
+  transition-delay: 0.9s;
 }
+
 
 
 
