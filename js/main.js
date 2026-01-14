@@ -62,3 +62,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// Animación de entrada para las tarjetas de servicios
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".service-card");
+  cards.forEach(card => card.classList.add("show"));
+});
+// Fin animación de entrada para las tarjetas de servicios
