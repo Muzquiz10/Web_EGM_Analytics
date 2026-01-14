@@ -91,7 +91,7 @@ img {
 
 .hero {
   background: #f1f5f9;
-  padding: 80px 20px;
+  padding: 20px;
   text-align: center;
 }
 
@@ -165,6 +165,31 @@ img {
   background-color: #223762;
   color: white;
 }
+
+/* =========================
+   BOTÓN PARA PÁGINAS DE SERVICIOS
+========================= */
+
+.btn-service {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 26px;
+  border: 2px solid #0f172a; /* azul oscuro visible en fondo claro */
+  background: transparent;
+  color: #0f172a; /* texto azul oscuro */
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: all 0.25s ease;
+}
+
+.btn-service:hover {
+  background-color: #0f172a;
+  color: white;
+}
+
 
 
 /* =========================
