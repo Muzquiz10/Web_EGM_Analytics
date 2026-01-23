@@ -53,14 +53,19 @@
 </header>
 
 <section class="hero">
-  <h1>Otros Servicios</h1>
+  <h1>Servicios de formación y consultoría</h1>
   <h2>Formación, consultoría y soluciones personalizadas</h2>
+  <!-- Botón WhatsApp -->
+  <a href="https://wa.me/34655148870?text=Hola%20EGM%20Analytics,%20quiero%20información%20sobre%20otros%20servicios"
+           class="btn-service" target="_blank" rel="noopener">
+          Cuéntame qué necesitas
+  </a> 
 </section>
 
 <section class="section">
   <div class="about-content">
     <div class="about-text">
-      <h2>¿Qué incluye este servicio?</h2>
+      <h2>¿Qué Ofrezco?</h2>
 
       <p>Además de Business Intelligence y desarrollo web, ofrezco servicios complementarios para ayudarte a mejorar tus procesos y tu estrategia digital.</p>
 
@@ -70,15 +75,31 @@
         <li>Optimización de procesos</li>
         <li>Automatizaciones personalizadas</li>
       </ul>
-
-        <a href="https://wa.me/34655148870?text=Hola%20EGM%20Analytics,%20quiero%20información%20sobre%20otros%20servicios"
-           class="btn-service" target="_blank" rel="noopener">
-          Cuéntame qué necesitas
-        </a>
-      
       </div>
     </div>
 </section>
+
+<!-- FORMULARIO CONTACTO -->
+  <section id="contacto" class="section">
+    <h2>Contacto</h2>
+    <p>Cuéntame en qué puedo ayudarte.
+    </p>
+    <p>¡Hablemos! Rellena el formulario y te responderé lo antes posible.</p>
+
+  <!-- MICROCOPY -->
+  <p class="microcopy-form">
+    Te responderé personalmente · Sin spam · Sin compromiso
+  </p>
+
+    <form id="contact-form"  action="https://formspree.io/f/mqekanrk" method="POST">
+      <input type="text" name="Nombre" placeholder="Nombre" required>
+      <input type="text" name="Apellidos" placeholder="Apellidos" required>
+      <input type="email" name="Email" placeholder="Email" required>
+      <textarea name="Mensaje" placeholder="Cuéntame tu proyecto"></textarea>
+      <button type="submit">Enviar</button>
+      <p id="form-status" aria-live="polite"></p>
+    </form>
+  </section>
 
 <footer class="footer">
   <div class="footer-social">
