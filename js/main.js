@@ -1,3 +1,4 @@
+//--- Apertura DOMContentLoaded --- //
 document.addEventListener("DOMContentLoaded", () => {
 
   /* =========================
@@ -76,5 +77,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelectorAll(".service-card")
     .forEach(card => card.classList.add("show"));
-});
 
+
+  /* =========================
+     AÑO DINÁMICO FOOTER
+  ========================= */
+
+  const yearSpan = document.getElementById("current-year");
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
+
+// --- Cierre DOMContentLoaded --- //
+  }); 
