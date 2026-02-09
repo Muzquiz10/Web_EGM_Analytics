@@ -43,7 +43,7 @@
       <li><a href="index.html">Inicio</a></li>
       <li><a href="aboutme.html">Sobre mí</a></li>
       <li><a href="servicios.html">Servicios</a></li>
-      <!-- <li><a href="#contacto" class="nav-cta">Contacto</a></li> -->
+      <li><a href="#contacto" class="nav-cta">Contacto</a></li>
       <li class="nav-social">
       <a href ="https://www.linkedin.com/in/enrique-javier-garc%C3%ADa-m%C3%BAzquiz-6a627860/" target="_blank" rel="noopener" aria-label="LinkedIn">
       <img src="assets/icons/Linkdin.svg" alt="LinkedIn">
@@ -58,38 +58,78 @@
 </section>
 
 <section class="section">
-  <div class="about-content">
-    <div class="about-text">
+  <div class="service-content">
+    <div class="service-text">
       <h2>¿Qué incluye este servicio?</h2>
 
       <p>Diseño y desarrollo páginas web profesionales, optimizadas para SEO, rápidas y con una experiencia de usuario clara.</p>
+      <p>Te escucho y adapto cada proyecto a tus necesidades específicas, modificando todo lo necesario para que tu web sea única, funcional y 100% de tu gusto.</p>
 
-      <p>Mis webs están pensadas para:</p>
+      <p>Siempre trato que mis webs:</p>
 
       <ul>
-        <li>Transmitir profesionalidad</li>
-        <li>Convertir visitas en clientes</li>
-        <li>Ser fáciles de mantener</li>
-        <li>Adaptarse a cualquier dispositivo</li>
+        <li>Transmitan profesionalidad</li>
+        <li>Conviertan visitas en clientes</li>
+        <li>Sean fáciles de mantener</li>
+        <li>Se adapten a cualquier dispositivo</li>
       </ul>
 
-        <a href="https://wa.me/34655148870?text=Hola%20EGM%20Analytics,%20quiero%20información%20sobre%20Desarrollo%20Web"
-           class="btn-service" target="_blank" rel="noopener">
-          Hablemos sobre tu web
-        </a>
-      </div>    
+      <a href="https://wa.me/34655148870?text=Hola%20EGM%20Analytics,%20quiero%20información%20sobre%20Desarrollo%20Web"
+         class="btn-service" target="_blank" rel="noopener">
+        Hablemos sobre tu web
+      </a>
     </div>
+  </div>
+
+  <div class="bi-image">
+    <img
+      src="assets/IMG/creacion_web_egmanalytics.png"
+      alt="Creación web profesional"
+      loading="lazy"
+    >
+  </div>
 </section>
 
+<!-- CONTACTO -->
+  <section id="contacto" class="section">
+    <h2>Contacto</h2>
+    <p>¿Tienes una web que necesitas mejorar o crear?
+    </p>
+    <p>¡Hablemos! Rellena el formulario y te responderé lo antes posible.</p>
+
+  <!-- MICROCOPY -->
+  <p class="microcopy-form">
+    Te responderé personalmente · Sin spam · Sin compromiso
+  </p>
+
+    <form id="contact-form"  action="https://formspree.io/f/mqekanrk" method="POST">
+      <input type="text" name="Nombre" placeholder="Nombre" required>
+      <input type="text" name="Apellidos" placeholder="Apellidos" required>
+      <input type="email" name="Email" placeholder="Email" required>
+      <textarea name="Mensaje" placeholder="Cuéntame tu proyecto"></textarea>
+      <button type="submit">Enviar</button>
+      <p id="form-status" aria-live="polite"></p>
+    </form>
+  </section>
+
+<!-- FOOTER -->
 <footer class="footer">
   <div class="footer-social">
     <p>© <span id="current-year"></span> EGM Analytics · BI & Digital Solutions</p>
-    <a href="https://www.linkedin.com/in/enrique-javier-garc%C3%ADa-m%C3%BAzquiz-6a627860/" target="_blank" rel="noopener">
+
+    <a
+      href="https://www.linkedin.com/in/enrique-javier-garc%C3%ADa-m%C3%BAzquiz-6a627860/"
+      target="_blank"
+      rel="noopener"
+      class="footer-linkedin"
+      aria-label="LinkedIn EGM Analytics"
+    >
       <img src="assets/icons/Linkdin.svg" alt="LinkedIn">
     </a>
   </div>
 </footer>
 
+<!-- JS -->
 <script src="js/main.js"></script>
 </body>
 </html>
