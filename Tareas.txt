@@ -1,5 +1,7 @@
-Tareas:
-
-15/02
-
-Seguir Trabajando el SEO con las KeyWords
+Next Step:
+Crear Blog. Empezar con los siguientes artículos:
+1️⃣ Qué es Power BI
+2️⃣ Power BI vs Excel
+3️⃣ Cómo crear un dashboard en Power BI
+4️⃣ Automatizar informes con Excel
+5️⃣ Qué es Business Intelligence
