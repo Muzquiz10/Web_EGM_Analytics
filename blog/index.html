@@ -29,6 +29,35 @@
   gtag('config', 'G-0TM7ST7BNQ');
 </script>
 
+<!-- Brevo Newsletter Styles -->
+<style>
+  @font-face {
+    font-display: block;
+    font-family: Roboto;
+    src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"), 
+         url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff")
+  }
+
+  #sib-container input::placeholder {
+    text-align: left;
+    font-family: Helvetica, sans-serif;
+    color: #c0ccda;
+  }
+
+  #sib-container textarea::placeholder {
+    text-align: left;
+    font-family: Helvetica, sans-serif;
+    color: #c0ccda;
+  }
+
+  #sib-container a {
+    text-decoration: underline;
+    color: #2563eb;
+  }
+</style>
+
+<link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+
 </head>
 
 <body>
@@ -92,7 +121,44 @@
   </article>
 
 </div>
+</section>
 
+<section class="newsletter">
+
+<div class="sib-form" style="text-align: center;">
+  <div id="sib-form-container" class="sib-form-container">
+
+    <div id="success-message" class="sib-form-message-panel" style="display:none;">
+      Muchas gracias por suscribirte
+    </div>
+
+    <div id="sib-container" class="sib-container--large sib-container--vertical"
+         style="text-align:center; background-color:#f8fafc; max-width:540px; 
+         border-radius:12px; padding:30px; margin:auto;">
+
+      <form id="sib-form" method="POST"
+        action="https://193f353b.sibforms.com/serve/MUIFANphzP9c3DD1B0Tt0kJAFwRXxAlAGExJSE3i4s2qEjAt_Xcpuim3_R-npj25yP-qR6nEGFO-8TNBU3cn79d1FJ6Ize0sClpS9T-CdUM6XAsXiYYz7utayTJyqIRlWTgdXtrBQuWS541xAbFIyv46fslDo4inqSeUPah3K3wwASkAf9l_BLEKSNHq2Ds8eGEuqHE_xj1OFhb6Yw==">
+
+        <h3>Recibe nuevas guías de Business Intelligence</h3>
+
+        <p>Publico artículos sobre Power BI, dashboards y análisis de datos para empresas.</p>
+
+        <input type="email"
+               name="EMAIL"
+               placeholder="Tu email"
+               required
+               style="padding:12px; width:100%; margin-top:15px; border-radius:8px; border:1px solid #ccc;">
+
+        <button type="submit"
+                style="margin-top:15px; padding:12px 20px; background:#2563eb; color:white; border:none; border-radius:8px; cursor:pointer;">
+          Suscribirme
+        </button>
+
+      </form>
+    </div>
+
+  </div>
+</div>
 
 </section>
 
@@ -117,6 +183,13 @@ aria-label="LinkedIn EGM Analytics"
 </footer>
 
 <script src="../js/main.js"></script>
+
+<script>
+window.REQUIRED_ERROR_MESSAGE = "Este campo no puede quedarse vacío.";
+window.EMAIL_INVALID_MESSAGE = "Email no válido";
+</script>
+
+<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 
 </body>
 </html>
