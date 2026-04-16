@@ -132,27 +132,53 @@
       Muchas gracias por suscribirte
     </div>
 
+    <div id="error-message" class="sib-form-message-panel" style="display:none;">
+      Ha ocurrido un error. Inténtalo de nuevo.
+    </div>
+
     <div id="sib-container" class="sib-container--large sib-container--vertical"
          style="text-align:center; background-color:#f8fafc; max-width:540px; 
          border-radius:12px; padding:30px; margin:auto;">
 
       <form id="sib-form" method="POST"
-        action="https://193f353b.sibforms.com/serve/MUIFANphzP9c3DD1B0Tt0kJAFwRXxAlAGExJSE3i4s2qEjAt_Xcpuim3_R-npj25yP-qR6nEGFO-8TNBU3cn79d1FJ6Ize0sClpS9T-CdUM6XAsXiYYz7utayTJyqIRlWTgdXtrBQuWS541xAbFIyv46fslDo4inqSeUPah3K3wwASkAf9l_BLEKSNHq2Ds8eGEuqHE_xj1OFhb6Yw==">
+        action="https://193f353b.sibforms.com/serve/MUIFANphzP9c3DD1B0Tt0kJAFwRXxAlAGExJSE3i4s2qEjAt_Xcpuim3_R-npj25yP-qR6nEGFO-8TNBU3cn79d1FJ6Ize0sClpS9T-CdUM6XAsXiYYz7utayTJyqIRlWTgdXtrBQuWS541xAbFIyv46fslDo4inqSeUPah3K3wwASkAf9l_BLEKSNHq2Ds8eGEuqHE_xj1OFhb6Yw=="
+        data-type="subscription">
 
         <h3>Recibe nuevas guías de Business Intelligence</h3>
 
         <p>Publico artículos sobre Power BI, dashboards y análisis de datos para empresas.</p>
 
-        <input type="email"
-               name="EMAIL"
-               placeholder="Tu email"
-               required
-               style="padding:12px; width:100%; margin-top:15px; border-radius:8px; border:1px solid #ccc;">
+        <div class="sib-input sib-form-block">
+          <div class="form__entry entry_block">
+            <div class="form__label-row">
 
-        <button type="submit"
-                style="margin-top:15px; padding:12px 20px; background:#2563eb; color:white; border:none; border-radius:8px; cursor:pointer;">
-          Suscribirme
-        </button>
+              <input
+                class="input"
+                type="email"
+                id="EMAIL"
+                name="EMAIL"
+                autocomplete="off"
+                placeholder="Tu email"
+                required
+                style="padding:12px; width:100%; margin-top:15px; border-radius:8px; border:1px solid #ccc;"
+              />
+
+            </div>
+          </div>
+        </div>
+
+        <div class="sib-form-block">
+          <button
+            class="sib-form-block__button"
+            form="sib-form"
+            type="submit"
+            style="margin-top:15px; padding:12px 20px; background:#2563eb; color:white; border:none; border-radius:8px; cursor:pointer;">
+            Suscribirme
+          </button>
+        </div>
+
+        <input type="text" name="email_address_check" value="" class="input--hidden">
+        <input type="hidden" name="locale" value="es">
 
       </form>
     </div>
