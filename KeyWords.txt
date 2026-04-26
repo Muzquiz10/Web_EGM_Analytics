@@ -36,3 +36,8 @@ Desarrollo Web
 - Páginas web para negocios
 - Desarrollo web profesional
 - Web corporativa profesional
+
+Blog:
+- Excel
+- PowerBIvsExcel
+- ¿Cuánto cuesta Power BI?
