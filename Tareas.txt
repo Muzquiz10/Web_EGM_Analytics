@@ -9,3 +9,27 @@ Qué es Business Intelligence y por qué tu empresa lo necesita
 Como empezar con Business Intelligence en una pyme (paso a paso)
 
 
+Hola,
+
+Acabo de publicar una nueva guía en el blog que creo que te puede resultar útil:
+
+👉 ¿Cuánto cuesta implementar Power BI en una empresa?
+
+En el artículo explico de forma sencilla:
+
+Qué cuesta realmente (licencias, desarrollo, mantenimiento)
+Cómo empezar sin hacer una gran inversión
+Y algo importante: el coste de no trabajar con datos
+
+La idea es ayudarte a tener una visión clara antes de tomar decisiones.
+
+Puedes leerlo aquí:
+https://egmanalytics.com/blog/cuanto-cuesta-power-bi
+
+Si después de leerlo tienes dudas o quieres ver cómo aplicarlo a tu caso concreto, puedes responder a este email y lo vemos.
+
+Un saludo,
+Enrique
+EGM Analytics
+
+
