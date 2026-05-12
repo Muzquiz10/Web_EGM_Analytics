@@ -1,4 +1,11 @@
 User-agent: *
 Allow: /
 
+# Bloquear carpetas internas
+Disallow: /assets/IMG/
+Disallow: /assets/Icons/
+Disallow: /assets/favicon/
+
+# Sitemap
 Sitemap: https://egmanalytics.com/sitemap.xml
+
