@@ -3,9 +3,9 @@ Crear Blog. Empezar con los siguientes artículos:
 1️⃣ Qué es Power BI --> Publicado 14/03/2026
 2️⃣ Power BI vs Excel --> Publicado 11/04/2026
 3️⃣¿Cuánto cuesta implementar Power BI? --> 26/04/2026
-Qué es Business Intelligence y por qué tu empresa lo necesita
+Qué es Business Intelligence y por qué tu empresa lo necesita --> Publicado 15/05/2026
 Ejemplos de dashboards
-Errores más comunes al implementar Power BI, y cómo evitarlos
+Errores más comunes al implementar Power BI, y cómo evitarlos --> Publicado 29/05/2026
 
 Como empezar con Business Intelligence en una pyme (paso a paso)
 
