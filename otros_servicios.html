@@ -58,23 +58,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  var form = document.getElementById("contact-form");
-  if (form) {
-    var submitting = false;
-
-    form.addEventListener("submit", function (e) {
-      if (submitting) return;
-      e.preventDefault();
-
-      sendEvent("generate_lead", {
-        lead_type: "contact_form",
-        form_id: "contact-form"
-      }, function () {
-        submitting = true;
-        HTMLFormElement.prototype.submit.call(form);
-      });
-    });
-  }
 });
 </script>
 

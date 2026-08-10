@@ -7,10 +7,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const form = document.getElementById("contact-form");
   const status = document.getElementById("form-status");
+  const trackEvent = (name, params) => {
+    if (typeof gtag === "function") {
+      gtag("event", name, params);
+    }
+  };
 
   if (form && status) {
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
+      trackEvent("submit_form", {
+        event_category: "conversion",
+        event_label: window.location.pathname
+      });
 
       const data = new FormData(form);
 
@@ -25,6 +34,12 @@ document.addEventListener("DOMContentLoaded", () => {
           status.textContent =
             "Gracias por contactar con EGM Analytics, te responderé lo antes posible.";
           status.style.color = "#035d24ff";
+          trackEvent("generate_lead", {
+            lead_type: "contact_form",
+            form_id: "contact-form",
+            event_category: "conversion",
+            event_label: window.location.pathname
+          });
           form.reset();
         } else {
           status.textContent = "Ha ocurrido un error. Inténtalo de nuevo.";
@@ -54,19 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
       link.addEventListener("click", () => {
         menuToggle.classList.remove("active");
         navLinks.classList.remove("active");
-      });
-    });
-  }
-
-  /* =========================
-     GA4 - FORMULARIO
-  ========================= */
-
-  if (form) {
-    form.addEventListener("submit", () => {
-      gtag("event", "submit_form", {
-        event_category: "conversion",
-        event_label: window.location.pathname
       });
     });
   }
