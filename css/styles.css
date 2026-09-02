@@ -747,11 +747,14 @@ img {
 
 /* Botón */
 
-.btn-service {
+/* Botón únicamente dentro de tarjetas del blog */
+
+.blog-card .btn-service {
   align-self: flex-start;
   padding: 10px 18px;
   border-radius: 8px;
   background: #1f6feb;
+  border: 2px solid #1f6feb;
   color: white;
   text-decoration: none;
   font-size: 0.9rem;
@@ -759,9 +762,9 @@ img {
   transition: all 0.2s ease;
 }
 
-
-.btn-service:hover {
+.blog-card .btn-service:hover {
   background: #155bd6;
+  border-color: #155bd6;
 }
 
 /* =========================
@@ -1047,4 +1050,705 @@ color: #1f6feb;
   margin: 40px auto;
   border-radius: 18px;
   box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+}
+
+/* =====================================================
+   PLANES / PRECIOS DESARROLLO WEB
+===================================================== */
+.pricing-section {
+  padding: 35px 20px 70px;
+  background-color: #f8fafc;
+}
+
+
+/* =========================
+   CABECERA PRECIOS
+========================= */
+
+.pricing-header {
+  max-width: 800px;
+  margin: 0 auto 35px;
+}
+
+.pricing-header h2 {
+  margin: 0 0 15px;
+  font-size: 2rem;
+  color: #0f172a;
+}
+
+.pricing-header p {
+  max-width: 680px;
+  margin: 0 auto;
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   GRID PRECIOS
+========================= */
+
+.pricing-grid {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 28px;
+
+  align-items: stretch;
+}
+
+
+/* =========================
+   TARJETAS
+========================= */
+
+.pricing-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+
+  padding: 34px 28px 30px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #dbe3ec;
+  border-radius: 18px;
+
+  box-shadow:
+    0 8px 25px rgba(15, 23, 42, 0.07);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-6px);
+
+  border-color: #94a3b8;
+
+  box-shadow:
+    0 18px 40px rgba(15, 23, 42, 0.12);
+}
+
+
+/* =========================
+   PLAN PROFESIONAL DESTACADO
+========================= */
+
+.pricing-featured {
+  border: 2px solid #2563eb;
+
+  box-shadow:
+    0 15px 38px rgba(37, 99, 235, 0.15);
+}
+
+.pricing-featured:hover {
+  border-color: #2563eb;
+}
+
+
+/* Etiqueta Más recomendado */
+
+.pricing-badge {
+  position: absolute;
+
+  top: -16px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  padding: 8px 18px;
+
+  background-color: #2563eb;
+  color: #ffffff;
+
+  border-radius: 50px;
+
+  font-size: 0.82rem;
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  box-shadow:
+    0 6px 16px rgba(37, 99, 235, 0.25);
+}
+
+
+/* =========================
+   CABECERA TARJETAS
+========================= */
+
+.pricing-card-header {
+  padding-bottom: 25px;
+
+  text-align: center;
+
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.pricing-icon {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 1.35rem;
+}
+
+.pricing-card-header h3 {
+  margin: 0 0 10px;
+
+  color: #0f172a;
+
+  font-size: 1.45rem;
+  line-height: 1.25;
+}
+
+.pricing-subtitle {
+  min-height: 50px;
+
+  margin: 0 auto;
+
+  color: #64748b;
+
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+
+/* =========================
+   PRECIO
+========================= */
+
+.pricing-price {
+  margin-top: 22px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.pricing-from {
+  margin-bottom: 2px;
+
+  color: #64748b;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.pricing-number {
+  color: #0f172a;
+
+  font-size: 2.6rem;
+  font-weight: 700;
+
+  line-height: 1.1;
+}
+
+
+/* Precio del plan recomendado */
+
+.pricing-featured .pricing-number {
+  color: #2563eb;
+}
+
+
+/* =========================
+   CARACTERÍSTICAS
+========================= */
+
+.pricing-features {
+  flex: 1;
+
+  padding: 25px 0;
+}
+
+.feature {
+  position: relative;
+
+  margin: 0;
+  padding: 9px 0;
+
+  border-bottom: 1px solid #f1f5f9;
+
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.feature:last-of-type {
+  border-bottom: none;
+}
+
+
+/* Incluido */
+
+.feature.yes {
+  color: #334155;
+  font-weight: 500;
+}
+
+
+/* No incluido */
+
+.feature.no {
+  color: #94a3b8;
+}
+
+
+/* Opcional */
+
+.feature.optional {
+  color: #64748b;
+  font-style: italic;
+}
+
+
+/* Número de páginas */
+
+.feature-info {
+  margin: 17px 0;
+
+  padding: 12px 14px;
+
+  background-color: #f1f5f9;
+
+  border-radius: 8px;
+
+  color: #0f172a;
+
+  font-size: 0.92rem;
+
+  text-align: center;
+}
+
+
+/* Revisión tras publicación */
+
+.feature-highlight {
+  margin: 20px 0 0;
+
+  padding: 13px 12px;
+
+  background-color: #eff6ff;
+
+  border: 1px solid #dbeafe;
+  border-radius: 9px;
+
+  color: #1e3a8a;
+
+  font-size: 0.88rem;
+  font-weight: 600;
+
+  text-align: center;
+}
+
+
+/* =========================
+   PARTE INFERIOR TARJETA
+========================= */
+
+.pricing-footer {
+  padding-top: 22px;
+
+  border-top: 1px solid #e2e8f0;
+}
+
+.pricing-ideal {
+  min-height: 88px;
+
+  margin: 0;
+
+  color: #475569;
+
+  font-size: 0.9rem;
+  line-height: 1.55;
+
+  text-align: center;
+}
+
+.pricing-ideal strong {
+  color: #0f172a;
+}
+
+
+/* =========================
+   BOTONES PRECIOS
+========================= */
+
+.pricing-btn {
+  box-sizing: border-box;
+
+  display: flex;
+
+  width: 100%;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 18px;
+
+  padding: 13px 18px;
+
+  background-color: transparent;
+
+  border: 2px solid #0f172a;
+  border-radius: 50px;
+
+  color: #0f172a;
+
+  text-decoration: none;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  text-align: center;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.pricing-btn:hover {
+  background-color: #0f172a;
+  color: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+
+/* Botón del plan recomendado */
+
+.pricing-btn-featured {
+  background-color: #2563eb;
+
+  border-color: #2563eb;
+
+  color: #ffffff;
+}
+
+.pricing-btn-featured:hover {
+  background-color: #1d4ed8;
+
+  border-color: #1d4ed8;
+
+  color: #ffffff;
+}
+
+
+/* =========================
+   NOTA PRECIOS
+========================= */
+
+.pricing-note {
+  max-width: 900px;
+
+  margin: 50px auto 0;
+
+  padding: 25px 30px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+
+  box-shadow:
+    0 6px 20px rgba(15, 23, 42, 0.05);
+
+  color: #475569;
+
+  text-align: center;
+}
+
+.pricing-note p {
+  margin: 7px 0;
+
+  line-height: 1.55;
+}
+
+.pricing-note strong {
+  color: #0f172a;
+}
+
+.pricing-small {
+  margin-top: 15px !important;
+
+  color: #64748b;
+
+  font-size: 0.82rem;
+}
+
+
+/* =====================================================
+   RESPONSIVE PRECIOS - TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .pricing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    max-width: 850px;
+  }
+
+  /* El avanzado ocupa toda la segunda fila */
+
+  .pricing-card:last-child {
+    grid-column: 1 / -1;
+
+    width: 100%;
+    max-width: 410px;
+
+    box-sizing: border-box;
+
+    justify-self: center;
+  }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE PRECIOS - MÓVIL
+===================================================== */
+
+@media (max-width: 700px) {
+
+  .pricing-section {
+    padding: 55px 16px 60px;
+  }
+
+  .pricing-header {
+    margin-bottom: 38px;
+  }
+
+  .pricing-header h2 {
+    font-size: 1.7rem;
+  }
+
+  .pricing-grid {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    max-width: 500px;
+  }
+
+  .pricing-card,
+  .pricing-card:last-child {
+    grid-column: auto;
+
+    width: 100%;
+    max-width: none;
+
+    box-sizing: border-box;
+  }
+
+  .pricing-card {
+    padding: 32px 22px 25px;
+  }
+
+  .pricing-subtitle {
+    min-height: auto;
+  }
+
+  .pricing-ideal {
+    min-height: auto;
+  }
+
+  .pricing-number {
+    font-size: 2.35rem;
+  }
+
+  .pricing-note {
+    margin-top: 40px;
+
+    padding: 22px 18px;
+  }
+
+}
+
+
+/* =====================================================
+   MÓVILES PEQUEÑOS
+===================================================== */
+
+@media (max-width: 400px) {
+
+  .pricing-section {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .pricing-card {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .pricing-card-header h3 {
+    font-size: 1.3rem;
+  }
+
+  .pricing-number {
+    font-size: 2.15rem;
+  }
+
+  .pricing-btn {
+    font-size: 0.9rem;
+  }
+
+}
+/* =========================
+   ACCIONES PLANES WEB
+========================= */
+
+.pricing-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+
+  margin-top: 22px;
+}
+
+.pricing-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  min-height: 44px;
+  padding: 10px 14px;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+
+/* WHATSAPP */
+
+.pricing-whatsapp {
+  background-color: #0f172a;
+  border: 2px solid #0f172a;
+  color: #ffffff;
+}
+
+.pricing-whatsapp:hover {
+  background-color: #1e293b;
+  border-color: #1e293b;
+
+  transform: translateY(-2px);
+}
+
+
+/* FORMULARIO */
+
+.pricing-form {
+  background-color: transparent;
+
+  border: 2px solid #0f172a;
+
+  color: #0f172a;
+}
+
+.pricing-form:hover {
+  background-color: #0f172a;
+  color: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+
+/* PLAN PROFESIONAL */
+
+.pricing-featured .pricing-whatsapp {
+  background-color: #2563eb;
+  border-color: #2563eb;
+}
+
+.pricing-featured .pricing-whatsapp:hover {
+  background-color: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+
+/* MÓVIL */
+
+@media (max-width: 400px) {
+
+  .pricing-actions {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* =========================
+   INTRO DESARROLLO WEB
+========================= */
+
+.web-intro {
+  padding: 10px 20px 25px;
+  background: #f1f5f9;
+}
+
+.web-intro-content {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.web-intro-content h2 {
+  margin: 0 0 15px;
+  color: #0f172a;
+  font-size: 1.6rem;
+}
+
+.web-intro-content p {
+  max-width: 760px;
+  margin: 0 auto 10px;
+  color: #475569;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   TEXTO CONTACTO PLANES
+========================= */
+
+.pricing-contact {
+  margin-top: 22px;
+}
+
+.pricing-contact-title {
+  margin: 0 0 10px;
+  color: #475569;
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-align: center;
 }
