@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contact-form");
   const status = document.getElementById("form-status");
   const serviceSelect = document.getElementById("service-select");
+  const biProjectGroup = document.getElementById("bi-project-group");
+  const biProjectSelect = document.getElementById("bi-project-select");
   const webPlanGroup = document.getElementById("web-plan-group");
   const webPlanSelect = document.getElementById("web-plan-select");
   const classesTopicGroup = document.getElementById("classes-topic-group");
@@ -71,6 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const selectedService = serviceSelect.value;
     const selectedWebPlan = webPlanSelect ? webPlanSelect.value : "";
+    const showBiProject = selectedService === "Business Intelligence";
     const showWebPlan = selectedService === "Desarrollo Web";
     const showClassesTopic = selectedService === "Clases";
     const budgetType =
@@ -79,6 +82,9 @@ document.addEventListener("DOMContentLoaded", () => {
         : showWebPlan && selectedWebPlan === "Web Avanzada / Tienda"
           ? "webAdvanced"
           : "";
+
+    setGroupVisibility(biProjectGroup, showBiProject);
+    setFieldState(biProjectSelect, showBiProject, true);
 
     setGroupVisibility(webPlanGroup, showWebPlan);
     setFieldState(webPlanSelect, showWebPlan, true);
@@ -100,6 +106,22 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   updateConditionalFields();
+
+  document.querySelectorAll("[data-bi-project]").forEach((link) => {
+    link.addEventListener("click", () => {
+      const selectedProject = link.dataset.biProject;
+
+      if (serviceSelect) {
+        serviceSelect.value = "Business Intelligence";
+      }
+
+      updateConditionalFields();
+
+      if (biProjectSelect && selectedProject) {
+        biProjectSelect.value = selectedProject;
+      }
+    });
+  });
 
   if (form && status) {
     form.addEventListener("submit", async (e) => {
