@@ -7,11 +7,99 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const form = document.getElementById("contact-form");
   const status = document.getElementById("form-status");
+  const serviceSelect = document.getElementById("service-select");
+  const webPlanGroup = document.getElementById("web-plan-group");
+  const webPlanSelect = document.getElementById("web-plan-select");
+  const classesTopicGroup = document.getElementById("classes-topic-group");
+  const classesTopicInput = document.getElementById("classes-topic");
+  const budgetGroup = document.getElementById("budget-group");
+  const budgetSelect = document.getElementById("budget-select");
   const trackEvent = (name, params) => {
     if (typeof gtag === "function") {
       gtag("event", name, params);
     }
   };
+  const budgetRanges = {
+    businessIntelligence: [
+      "100-200€",
+      "200€-300€",
+      "300€-500€",
+      "+ 500€",
+      "No estoy seguro"
+    ],
+    webAdvanced: [
+      "559€-600€",
+      "600€-700€",
+      "700€-800€",
+      "900€-1.000€",
+      "+ 1.000€"
+    ]
+  };
+  const setGroupVisibility = (group, visible) => {
+    if (group) {
+      group.classList.toggle("is-hidden", !visible);
+    }
+  };
+  const setFieldState = (field, enabled, required = false) => {
+    if (!field) return;
+    field.disabled = !enabled;
+    field.required = enabled && required;
+
+    if (!enabled) {
+      field.value = "";
+    }
+  };
+  const updateBudgetOptions = (ranges = []) => {
+    if (!budgetSelect) return;
+
+    budgetSelect.replaceChildren();
+
+    const placeholder = document.createElement("option");
+    placeholder.value = "";
+    placeholder.textContent = "Selecciona una franja";
+    budgetSelect.appendChild(placeholder);
+
+    ranges.forEach((range) => {
+      const option = document.createElement("option");
+      option.value = range;
+      option.textContent = range;
+      budgetSelect.appendChild(option);
+    });
+  };
+  const updateConditionalFields = () => {
+    if (!serviceSelect) return;
+
+    const selectedService = serviceSelect.value;
+    const selectedWebPlan = webPlanSelect ? webPlanSelect.value : "";
+    const showWebPlan = selectedService === "Desarrollo Web";
+    const showClassesTopic = selectedService === "Clases";
+    const budgetType =
+      selectedService === "Business Intelligence"
+        ? "businessIntelligence"
+        : showWebPlan && selectedWebPlan === "Web Avanzada / Tienda"
+          ? "webAdvanced"
+          : "";
+
+    setGroupVisibility(webPlanGroup, showWebPlan);
+    setFieldState(webPlanSelect, showWebPlan, true);
+
+    setGroupVisibility(classesTopicGroup, showClassesTopic);
+    setFieldState(classesTopicInput, showClassesTopic, true);
+
+    setGroupVisibility(budgetGroup, Boolean(budgetType));
+    setFieldState(budgetSelect, Boolean(budgetType), true);
+    updateBudgetOptions(budgetType ? budgetRanges[budgetType] : []);
+  };
+
+  if (serviceSelect) {
+    serviceSelect.addEventListener("change", updateConditionalFields);
+  }
+
+  if (webPlanSelect) {
+    webPlanSelect.addEventListener("change", updateConditionalFields);
+  }
+
+  updateConditionalFields();
 
   if (form && status) {
     form.addEventListener("submit", async (e) => {
@@ -41,6 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
             event_label: window.location.pathname
           });
           form.reset();
+          updateConditionalFields();
         } else {
           status.textContent = "Ha ocurrido un error. Inténtalo de nuevo.";
           status.style.color = "#8e1717ff";

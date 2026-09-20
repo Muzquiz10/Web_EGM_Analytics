@@ -163,6 +163,32 @@
     <form id="contact-form"  action="https://formspree.io/f/mqekanrk" method="POST">
       <input type="text" name="Nombre" placeholder="Nombre" required>
       <input type="text" name="Apellidos" placeholder="Apellidos" required>
+      <label class="form-label" for="service-select">¿Con qué servicio quieres que te ayude?</label>
+      <select id="service-select" name="Servicio" required>
+        <option value="">Selecciona un servicio</option>
+        <option value="Business Intelligence">Business Intelligence</option>
+        <option value="Desarrollo Web">Desarrollo Web</option>
+        <option value="Clases">Clases</option>
+      </select>
+      <div class="form-conditional is-hidden" id="web-plan-group">
+        <label class="form-label" for="web-plan-select">¿Qué plan de Desarrollo Web te interesa?</label>
+        <select id="web-plan-select" name="Plan de Desarrollo Web" disabled>
+          <option value="">Selecciona un plan</option>
+          <option value="Web Esencial">Web Esencial</option>
+          <option value="Web Profesional">Web Profesional</option>
+          <option value="Web Avanzada / Tienda">Web Avanzada / Tienda</option>
+        </select>
+      </div>
+      <div class="form-conditional is-hidden" id="classes-topic-group">
+        <label class="form-label" for="classes-topic">¿Sobre qué quieres las clases?</label>
+        <input type="text" id="classes-topic" name="Clases sobre" placeholder="Ej.: Power BI, Excel, SQL, Python..." disabled>
+      </div>
+      <div class="form-conditional is-hidden" id="budget-group">
+        <label class="form-label" for="budget-select">Por favor indícame tu presupuesto</label>
+        <select id="budget-select" name="Presupuesto" disabled>
+          <option value="">Selecciona una franja</option>
+        </select>
+      </div>
       <input type="email" name="Email" placeholder="Email" required>
       <textarea name="Mensaje" placeholder="Cuéntame tu proyecto" required></textarea>
       <button type="submit">Enviar</button>
@@ -186,6 +212,16 @@
     </a>
   </div>
 </footer>
+
+<a
+  href="https://wa.me/34655148870?text=Hola%20EGM%20Analytics,%20quiero%20recibir%20informacion%20sobre%20vuestros%20servicios."
+  class="floating-whatsapp"
+  target="_blank"
+  rel="noopener"
+  aria-label="Contactar por WhatsApp"
+>
+  <img src="assets/icons/whatsapp.svg" alt="">
+</a>
 
 <!-- JS -->
 <script src="js/main.js"></script>
