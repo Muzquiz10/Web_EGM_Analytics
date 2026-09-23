@@ -1521,6 +1521,15 @@ color: #1f6feb;
   line-height: 1.1;
 }
 
+.pricing-period {
+  margin-top: 6px;
+
+  color: #64748b;
+
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
 
 /* Precio del plan recomendado */
 
