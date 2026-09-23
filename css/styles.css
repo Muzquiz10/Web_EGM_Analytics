@@ -122,6 +122,193 @@ img {
   font-weight: 500;
 }
 
+/* Portada: servicios independientes */
+.home-hero {
+  padding: 44px 24px 24px;
+}
+
+.home-hero h1 {
+  max-width: 960px;
+  margin: 12px auto 24px;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1.15;
+}
+
+.home-eyebrow {
+  color: #1d4ed8;
+  font-weight: 600;
+}
+
+.home-lead,
+.home-independent,
+.home-section-intro {
+  max-width: 760px;
+  margin: 16px auto;
+  line-height: 1.7;
+}
+
+.home-lead {
+  color: #334155;
+  font-size: 1.15rem;
+}
+
+.home-section {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 28px 24px;
+}
+
+.home-section > h2,
+.home-section-intro {
+  text-align: center;
+}
+
+.home-services,
+.home-situation-list,
+.home-steps {
+  display: grid;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.home-situation-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.home-service-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: center;
+  padding: 28px;
+  background: #fff;
+  border: 1px solid #cbd5e1;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+}
+
+.home-service-card h3 {
+  margin: 0 0 12px;
+  font-size: 1.6rem;
+  color: #0f172a;
+}
+
+.home-service-card p,
+.home-service-card li,
+.home-situation-list li,
+.home-steps p {
+  line-height: 1.7;
+}
+
+.home-service-card ul {
+  padding-left: 20px;
+}
+
+.home-service-card li + li {
+  margin-top: 10px;
+}
+
+.home-service-detail {
+  color: #475569;
+}
+
+.home-service-card .btn-service {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.home-situation-list {
+  padding-left: 24px;
+}
+
+.home-situation-list li {
+  padding: 12px;
+}
+
+.home-steps {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding-left: 24px;
+}
+
+.home-steps li {
+  padding: 8px 16px;
+}
+
+.home-steps li::marker {
+  color: #1d4ed8;
+  font-weight: 700;
+}
+
+.home-steps h3 {
+  color: #0f172a;
+}
+
+@media (max-width: 700px) {
+  .home-services,
+  .home-situation-list,
+  .home-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .home-hero {
+    padding: 40px 20px 24px;
+  }
+
+  .home-service-card {
+    padding: 24px;
+    grid-template-columns: 1fr;
+  }
+
+  .home-service-card .btn-service {
+    padding: 12px 18px;
+  }
+}
+
+/* Ejemplos visuales y contenido de la portada */
+.home-service-copy { min-width: 0; }
+.home-web-examples { display: grid; gap: 12px; min-width: 0; padding: 20px; border-radius: 16px; background: #eaf1fa; }
+.home-site-example .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+.home-site-example { margin: 0; overflow: hidden; background: #fff; border: 3px solid #fff; border-radius: 10px; box-shadow: 0 8px 20px rgba(15, 23, 42, .16); transform: rotate(-1deg); transition: transform .2s ease; }
+.home-site-example + .home-site-example { width: 88%; justify-self: end; transform: rotate(1deg); }
+.home-web-examples .home-site-example:hover,
+.home-web-examples .home-site-example:focus-within { transform: rotate(0); }
+.home-site-example img { width: 100%; height: auto; }
+.home-site-example figcaption { padding: 8px 12px; text-align: center; font-size: .9rem; font-weight: 600; }
+.home-site-example a { color: #1d4ed8; text-underline-offset: 3px; }
+.home-site-example > a { display: block; }
+.home-site-example a:focus-visible { outline: 3px solid #2563eb; outline-offset: -3px; }
+.home-service-preview { margin: 0; min-width: 0; padding: 20px; border-radius: 16px; background: #eaf1fa; }
+.home-service-preview img { width: 100%; height: auto; }
+.home-report-images { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: center; gap: 12px; padding: 4px 2px; }
+.home-report-images a { display: block; overflow: hidden; background: #fff; border: 3px solid #fff; border-radius: 10px; box-shadow: 0 8px 20px rgba(15, 23, 42, .16); transition: transform .2s ease; }
+.home-report-main { grid-column: 1 / -1; transform: rotate(-1deg); }
+.home-report-secondary { grid-column: auto; order: 1; transform: rotate(2deg); }
+.home-report-secondary:last-child { transform: rotate(-2deg); }
+.home-report-wide { grid-column: 1 / -1; order: 2; transform: rotate(-1deg); }
+.home-report-images a:hover { transform: rotate(0); }
+.home-report-images a:focus-visible { outline: 3px solid #2563eb; outline-offset: 4px; transform: rotate(0); }
+@media (prefers-reduced-motion: reduce) {
+  .home-report-images a,
+  .home-site-example { transition: none; }
+}
+.home-service-preview figcaption { margin-top: 16px; color: #475569; font-size: .8rem; text-align: center; }
+.home-preview-note { margin-bottom: 0; color: #334155; font-size: .95rem; }
+.home-situations { box-sizing: border-box; background: #e2eaf5; border-radius: 20px; }
+.home-expectations { box-sizing: border-box; background: #0f172a; border-radius: 20px; color: #e2e8f0; }
+.home-expectations h2, .home-expectations h3 { color: #fff; }
+.home-expectation-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+.home-expectation-grid p { line-height: 1.7; }
+.home-faq details { padding: 18px 20px; margin: 12px 0; background: #fff; border: 1px solid #cbd5e1; border-radius: 12px; }
+.home-faq summary { cursor: pointer; font-weight: 600; color: #0f172a; line-height: 1.5; }
+.home-faq details p { max-width: 900px; color: #334155; line-height: 1.7; }
+.home-faq summary:focus-visible { outline: 3px solid #2563eb; outline-offset: 5px; }
+@media (max-width: 700px) {
+  .home-expectation-grid { grid-template-columns: 1fr; gap: 8px; }
+  .home-service-preview,
+  .home-web-examples { padding: 12px; }
+
+}
+
 /* =========================
    HERO BUSINESS INTELLIGENCE
 ========================= */
